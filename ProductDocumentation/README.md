@@ -2,6 +2,8 @@
 
 This project example demonstrates how to define, preview, and execute a process of generating product documentation.
 
+Note: it is recommended to work with this example using [Semantic Kernel Tools](https://marketplace.visualstudio.com/items?itemName=ms-semantic-kernel.semantic-kernel) VS Code extension.
+
 ## Prerequisites
 
 - Install [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0).
