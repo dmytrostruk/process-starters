@@ -33,9 +33,11 @@ public sealed class GenerateDocumentationStep : KernelProcessStep<GeneratedDocum
         IChatCompletionService chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
         var generatedDocumentationResponse = await chatCompletionService.GetChatMessageContentAsync(this._state.ChatHistory!);
 
-        await context.EmitEventAsync("DocumentationGenerated", generatedDocumentationResponse.Content!.ToString());
+        var documentationString = generatedDocumentationResponse.Content!.ToString();
 
-        return generatedDocumentationResponse.ToString();
+        await context.EmitEventAsync("DocumentationGenerated", documentationString);
+
+        return documentationString;
     }
 }
 
