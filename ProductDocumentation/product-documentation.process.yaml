@@ -16,8 +16,8 @@ workflow:
         - on_condition:
             type: default
             emits:
-              - event_type: GenerateDocumentation.OnResult
               - event_type: DocumentationGenerated
+              - event_type: GenerateDocumentation.OnResult
     - id: PublishDocumentationStep
       description: Publish the documentation
       implementation: PublishDocumentationStep
